@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Guardian</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAACvJJREFUeF7tXVlvFEkSjmxsDoMRl80lToO5bC5zLSBYPEi8zWr9UO7d55lfMI+s9tLytvsLdp5X3Y1kaedpQbI5JFguc99gTnOZGxsMtqlafbnuGWO6u7KququjuyKklhGdlRn5xddRmZGZkYpcJJFI1MVisdWO46xRSm0hol8R0WS35+T7oiDwjoj+6zjOCaXUBdu2L8bj8a5cmqhsXw4bfh8RtRalK9JovhBI2ra9NxsRMhIglUrtJaI/EtHYfGkh9RQVgQEi+qtlWfhBfyFfESCVSl0iooaiqiuNFwqBy5ZlNY6s/AsCpFKpdiJqLlTrUi8LBDosy/omrcnPBEilUt8S0b9ZqChKFBqB31iW9RMa0QRoa2urHRoaukdEEwrdstTPAoH+ioqKhS0tLT2aAMlk8p9Kqe9YqCZKhIKA4zg/tra2fq8SiUR9LBa7EUqr0ggrBGzbXqaSyeTvlFL/YqWZKBMKAo7j/B4E+LtS6odQWpRGWCHgOM4/1P79+w85jvNrVpqJMqEgoJQ6rFKpFOLH1aG0KI1wQ6AXBHC4aSX6hIeAECA8rFm2JARgaZbwlBIChIc1y5aEACzNEp5SQoDwsGbZkhCApVnCU0oIEB7WLFsSArA0S3hKCQHCw5plS0IAlmYJTykhQHhYs2wpUgSoqKig2bNnU21tLU2ZMoXGjRunP0opGjNmTEYDDQ0N6f//9OkTDQwMUG9vL7169YqePXtG795hHa20pewJUFNTQ4sWLSL8nTBhgjZ2vmRwcFCT4NGjR/TgwQPq7+/PV9Wh1VOWBMAvfcWKFTR//nyqqqoKBUzbtjUZuru76d69eyVDhrIiAAy/atUqWrBggXbtxZLPnz/TixcvqKurS3sHzlI2BKivr6dly5bR+PHj2eDtOI72CiACPhyl5AkwefJkWrt2rR7Y5fP9nm9j9fX10c2bN9kRoaQJAFff2NioB3elIB8/fqTTp0/T06dP2ahbsgRYuXKldvl475eKYKZw8uRJVuqWJAFWr15NS5YsyTp394Mw3tcYvEFyxQX81I1nEEM4d+6cni5ykpIjwLp16/S8PlvgxgRcBHfevn1LPT099PLlS3ry5EnWxxA4qq6upqlTp+rg0cSJE321jVnBoUOHTNQLtUxJEaChoYEw2vdjfPzCX79+TXfv3qU7d+4EAnnu3Lm0cOFCmjFjBo0d655DA4S7ePEiuwGg9nalsi28rq5OD/gqKys9GS9t+CtXrhRk8LV48WLtkeAdYrFYRt3evHmjf/3psLKnDhS4cEkQYNasWbRhwwbPo33E769fv66nX4WW6dOna+8EXUcOTBEhRPuXLiHxCj9hTwCAuW3bNj3P9yJYsDl//rx+x4cpmJLiVYXXBLwVFo+OHTum/3IU9gRYs2aNHvFnc6+ZQMVKHebbxVycARHwysLcH+9/rsKaAPgVNTU1eYrrw/jHjx9n+b7lSALWBNixYwfNnDnTGDdM7U6cOFEW6/TGnQ5YkC0BMOpHwMc00gd3f+bMmYKM9ANizPpxtgTYtWuXnmebCKZXly9fplu3bpkUlzIjEGBJAK+//sePH+uRtoh3BFgSYPv27XrvnonA9Z86dUqHdUW8I8COAAikbNy40WhjB6J8COuePXvWe8/lCY0AOwKsX7+eEF412dzx4cMHPeoPO9hTTtxhRQCM+DH4Q1zdRDiur5vozakMKwJgFy+We01W2Liur3MyrokurAgA42MGYOL+4fY7OjpM+ihlciDAigDNzc2EVTU3weAPc/4LFy64FZXvXRBgQwCs9m3atMloyRfLvIj6Yf4vEgwBNgTAih9Wz0xCv4j5Hzx4MFjP5Wle00Av7/+HDx/q6Z9IcATYeADTlT/ssLlx44aO/YsER4ANAfbs2UM45eMmOJGLyB+37dVuenP9ngUBvAwAJfafXyqxIAACQAgBm+z4xWHLAwcO5BeFCNfGggA44oVj3Sb7/bHqd+TIkQibLL9dZ0EAGH/58uVGGz+x5+/o0aP5RSHCtbEgAPb843CFieBkD4JAIvlBQAgwCkdsQ/NzCMWrObCNDecWENMoprAgwJYtW2jevHmuOIQRA/AyI3FVOEcBEADT2fv37wepJvCzLAiwc+dOo5M/IACOeuGcX6FECFAoZHPUKwQoAujDTYoHGIW9eIAikFE8QBFAFw+QGXTxAEUgo6kHwE4g5NtDrp1CiRCgUMjmqBfnAJByxUQKHQgSAphYIc9lvEQCuW8GMSWQxAFGkMjLbiDui0FCAB/ewctiEPflYCGADwJgIQj5fk02hGJDCPYDIu8eRxEC+LDKnDlz9AKMSYp37lvChAA+CDBt2jTCghCycLpJGAtCbjrk+l4I4BM901NBqJ7zTEAI4JMApkvCqB4Dwfb2dpaZwIQAPgmA9O+458ckHyDnk8FCAJ8E8DIQ5JwZRAjgkwB4bPfu3Totu4lwTcEqBDCxXpYyXkLCuNzh6tWreocQJxECBLAGFoQQEDI5IIJmOF7CIAQIQACvOYI4JogUAgQgAB71kiUM5XELyOHDh9lMCYUAAQngJU8gmkJk8Pbt22zSxQgBAhIAj2/evFnf+2sqSBnT2dnJ4ppWIYCp1XKU8+oFUBWXVPGYyeBCS7eAlmwIcSEKtokBSJOUcemqinlZBAaw0BmXXJjoLARwIQDSxeFVYLJCOLKqYpAAumL6ilVNUxECGCDl955AxAcwJsCiUaEF6xe4Lcwku+lIXYQABpaBW926dauna2PS1b5//56uXbumL4oshGCcAoKahq5H6yAEMLSK3zsDUT3CxbipG1nF8pVRHO4eGU2gl0lGk2zdFAIYEgDF/N4amm4iTQSkl33+/LmHln8pisEd9ED+gCCGT9coBPBoBr/jgdHNYFMpoocgAsYKuGAyk+DGEvzaMa/H5dFe3/Fu3RMCuCGU4XvTObbXquEhsMcAgl+3yTQuVxvYuOq2oCUE8Gql4fL5uD7eZ9OujyEs3d3drccebjmPhACucGYvgNfB0qVLjc4RBGjG06O4Ihb7E3B41WRfgxDAE7xfF0aUENnFcUdvMQWvDhxXQ8KndNxBCBCSRWB8gI3rZYO+t/2o3NfXp3ckjY41CAH8oBngGbxvkWhy0qRJAWoxfxTuHkvQmFbClY8WIYA5lnktiXk6Psg6XgiPgGvqkKUcEcZMhk93RgiQV7N6r6ympkYTAXN4k/OGuVqAoRErwGkkXFJpIkIAE5RCKoMVOpw5wN+qqip9IynW6kdH8zCYw/QNc3isIyBYhDuJyv1KWhZp4kLigjSTAQEhQMRpIQQQAqT+HwQXiSQC4gEiafZfOi0EEALIKyDKHBAPEGXrE5EQQAggr4AocwAe4C0Rud/ZGmWUyrfv70CA/xDRnvLto/QsBwIHVDKZ/LNS6k8CU/QQcBznL/AAvyWituh1X3pMRC0qkUjUxWKx2wJH9BCwbXuJQrdTqVSCiFqjB0Gke5y0LCuuCTDsBa4S0dhIQxKdzg/Ytr0yHo93aQIMe4G9RPS36GAQ6Z7+wbKsfUDgZwIMk+ASETVEGpry7/xly7Ia0938ggDDJGgnoubyxyGSPeywLOubkT3/igDDJPgWQwMiKu6xm0jaqCCd7ieiuGVZP42uPSMBUKitra12cHBwn1Lqu4KoJJWGgoDjOD9WVlbubWlp6cnUYFYCpAsnEol6pVQTETXFYrEmx3Hw7+pQtJdGvCLQq5TqtG27k4g6HcfpjMfjN3NV8j/QzIPcxYBzqgAAAABJRU5ErkJggg==" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Guardian<span>.</span></h1>
+        
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+          <li class="dropdown"><a href="#"><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#">Images</a></li>
+              <li><a href="#">Videos</a></li>
+              </li>
+            </ul>
+          </li>
+          <li><a href="login.html">login</a></li>
+          
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">Welcome to <span>Guardian</span></h2>
+            <p>Guardian ease your task. You don't have to deal tussle of finding out the vendors. You can directlt reach them from your home. We bridge the gap in between and have the best service provider(maid, electrician, driver, watchmen) under one roof.</p>
+            <p data-aos="fade-up"> </p>
+            <a data-aos="fade-up" data-aos-delay="200" href="services.html" class="btn-get-started">Service</a>
+            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Join us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url(https://images.pexels.com/photos/714698/pexels-photo-714698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+      <div class="carousel-item" style="background-image: url(https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+      <div class="carousel-item" style="background-image: url(https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+      <div class="carousel-item" style="background-image: url(https://images.pexels.com/photos/7286015/pexels-photo-7286015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+      <div class="carousel-item" style="background-image: url(https://images.pexels.com/photos/5591833/pexels-photo-5591833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">     
+        <div class="row position-relative">
+
+          <div class="col-lg-7 about-img" style="background-image: url(https://images.pexels.com/photos/6609465/pexels-photo-6609465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);"></div>
+
+          <div class="col-lg-7">
+            <h2>Guardian.</h2>
+            <div class="our-story">
+              <h4>Est 2023</h4>
+              <h3>The Meaning of Our Company</h3>
+              <p>Guardian is a Indore based company which aims at providing quality service to your quality home. You need service so your home, we have a better way to deal with it.
+                Guardian help you in every aspect. We list to variety of service provider here, paste every single detail about them. You can book them as per your need and we would get them at your place..</p>
+             
+             
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- ======= Alt Services Section ======= -->
+    <section id="alt-services" class="alt-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 img-bg" style="background-image: url(https://images.pexels.com/photos/9462135/pexels-photo-9462135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);" data-aos="zoom-in" data-aos-delay="100"></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3>There might be some qustion on your head-</h3>
+           
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-stopwatch  flex-shrink-0"></i>
+              <div>
+                <h4>Q1.How much time it takes the service provider to reach me out?</h4>
+                <p>Ans:-It possibly takes 30min-1 hour to reach the destination and might vary sometime due to uncertain reason</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-wallet flex-shrink-0"></i>
+              <div>
+                <h4>Q2.How the payment procedure go?</h4>
+                <p>Ans:-You can durectly pay to the service provider visiting you. We don't intervene in between.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-truck flex-shrink-0"></i>
+              <div>
+                <h4>Q3.Do vendors provide quality of service</h4>
+                <p>Ans:-Yes! Of course we have high profile professional who are expert in their field and are experienced one. Sometime if you are not satisfied you can directly reach out us.
+                </p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-shield-check flex-shrink-0"></i>
+              <div>
+                <h4>Q4.Are vendors legit. Do guardian gurantee security?</h4>
+                <p>Ans:-Again yes, we gurantee tour security infact its our priority. Before joining vendors to guardian we make sure their identity. Our team members visit the vendor, jot down the information, verify it and then we add them. So your security is never at risk.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <P>    </P>
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-map"></i>
+              <h3>Our Address</h3>
+              <p>MOG Line Road, INDORE, MP 452006</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+1 5589 55488 55</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+
+          <div class="col-lg-6 ">
+            <iframe src="https://maps.google.com/maps?q=shri Vaishnav polytechnic college&t=k&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div><!-- End Google Maps -->
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row gy-4">
+                <div class="col-lg-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-lg-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section>
+
+    
+
+    <!-- ======= Our Team Section ======= -->
+   <!-- End Our Team Section -->
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Guardian<span>.</span></h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+         
+
+         
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>UpConstruction</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+          
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
